@@ -5,19 +5,28 @@
     margin: 0;
     padding: 0;
     background-color: #DCDCDC;
-    font-family: 'Cormorant Upright', serif;
+    /*font-family: 'Cormorant Upright', serif;*/
+    font-family: 'Fondamento', cursive;
 }
+
+/* NAV BAR SECTION */
 
 a {
     text-decoration: none;
 }
 
 .container {
-    margin: 10px;
+    margin: 0;
     background: #333333 ;
+    padding: 10px 100px;
+}
+
+#navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
     height: 155px;
-    padding: 10px 200px;
-    border-radius: 25px;
+    width: 100%;
 }
 
 #logo-img {
@@ -41,10 +50,6 @@ h1 {
     margin-top: 40px;
 }
 
-h1:hover {
-    animation: shiny-animation 0.5s linear infinite;
-}
-
 @keyframes shiny-animation {
     0%{
         color: #A9A9A9;
@@ -58,7 +63,7 @@ h1:hover {
     float: right;
     background: #333333;
     list-style-type: none;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 0;
 }
 
@@ -75,8 +80,72 @@ h1:hover {
 }
 
 .button a:hover {
-    cursor: url("../imagens/clave_sol_cursor.png"), auto;
     animation: shiny-animation 0.3s linear;
+}
+
+/* MAIN CONTENT SECTION */
+
+.container#main-content {
+    background: #DCDCDC;
+    color: #333333;
+    margin-top: 160px;
+}
+
+/* FOOTER SECTION */
+
+.container#footer {
+    background: #333333;
+    color: #DCDCDC;
+    height: 155px;
+}
+
+/************* Large Devices Only *************/
+@media (min-width: 1200px) {
+
+}
+
+/************* Medium Devices Only *************/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+/************* Small Devices Only *************/
+@media (min-width: 768px) and (max-width: 991px){
+
+    * {
+        font-size: 0.9em;
+    }
+
+    /* NAV BAR SECTION */
+
+    .container {
+        height: 121px;
+    }
+
+    #logo-img {
+        background: url("../imagens/logo_banda_small.png") no-repeat;
+        border-radius: 10px;
+        border: #DCDCDC solid 2px;
+        background-size: cover;
+        width: 89px;
+        height: 101px;
+        float: left;
+        margin-right: 5px;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    #nav-menu {
+        margin: 20px 0 0 0;
+    }
+}
+
+/************* Extra Small Devices Only *************/
+@media (min-width: 480px) and (max-width: 767px) {
+
 }
 /*p{*/
 /*    font-family: sans-serif;*/
