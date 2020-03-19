@@ -119,7 +119,7 @@ h1 {
 
     /* NAV BAR SECTION */
 
-    .container {
+    .container#navbar {
         height: 121px;
     }
 
