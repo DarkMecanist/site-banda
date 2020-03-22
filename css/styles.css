@@ -128,6 +128,14 @@ button {
     padding-top: 8px;
 }
 
+#logo-camara {
+    background: url("../imagens/logo-camara_small.png") no-repeat center;
+    width: 280px;
+    height: 95px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /************* Large Devices Only *************/
 @media (min-width: 1200px) {
