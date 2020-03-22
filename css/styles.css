@@ -164,6 +164,12 @@ button {
     .hidden-m {
         display: none;
     }
+
+    /*  FOOTER SECTION  */
+
+    .footer-info {
+        font-size: 0.7em;
+    }
 }
 
 
@@ -180,6 +186,31 @@ button {
         display: none;
     }
 
+    /*  FOOTER SECTION  */
+
+    #footer {
+        height: 120px;
+    }
+
+    .footer-info-block {
+        font-size: 1.2em;
+        width: 25%;
+    }
+
+    .footer-info {
+        font-size: 0.6em;
+    }
+
+    #map-tile iframe {
+        width: 150px;
+        height: 70px;
+    }
+
+    #logo-camara {
+        background: url("../imagens/logo-camara_extra_small.png");
+        width: 180px;
+        height: 61px;
+    }
 }
 
 /************* Extra Small Devices Only *************/
@@ -211,6 +242,8 @@ button {
         background: url("../imagens/logo_banda_small.png");
         width: 89px;
         height: 101px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #collapse-menu {
@@ -220,4 +253,33 @@ button {
     #main-content {
         padding-top: 131px;
     }
+
+    /*  FOOTER SECTION  */
+
+    #footer {
+        height: 450px;
+    }
+
+    .footer-info-block {
+        font-size: 1.6em;
+        width: 100%;
+    }
+
+    .footer-info {
+        font-size: 0.6em;
+    }
+
+    #map-tile iframe {
+        width: 250px;
+        height: 100px;
+    }
+
+    #logo-camara {
+        background: url("../imagens/logo-camara_small.png") no-repeat center;
+        width: 280px;
+        height: 95px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
