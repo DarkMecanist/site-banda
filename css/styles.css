@@ -1,210 +1,197 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #DCDCDC;
-    /*font-family: 'Cormorant Upright', serif;*/
+body {
     font-family: 'Fondamento', cursive;
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #333333;
+    color: whitesmoke;
+}
+
+button:focus {
+    outline: 0;
 }
 
 /* NAV BAR SECTION */
 
 a {
     text-decoration: none;
+    color: whitesmoke;
 }
 
-.container {
-    margin: 0;
-    background: #333333 ;
-    padding: 10px 100px;
+ul {
+    list-style: none;
 }
 
-#navbar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 155px;
-    width: 100%;
-}
-
-#logo-img {
-    background: url("../imagens/logo_banda.png") no-repeat;
-    border-radius: 10px;
-    border: #DCDCDC solid 2px;
-    background-size: cover;
-    width: 119px;
-    height: 135px;
-    float: left;
-    margin-right: 10px;
+li {
+    display: inline;
 }
 
 h1 {
+    font-size: 1.6em;
+    color: whitesmoke;
     text-transform: capitalize;
-    background-color: #333333;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px #DCDCDC;
-    color: #DCDCDC;
-    margin-top: 40px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 22px;
 }
 
-@keyframes shiny-animation {
-    0%{
-        color: #A9A9A9;
-    }
-    100%{
-        color: #DCDCDC;
-    }
+button {
+    float: right;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #333333;
+}
+
+#icon-bar {
+    color: whitesmoke;
+    display: block;
+
+}
+
+#nav-bar {
+    width: 100%;
+    height: 80px;
+    background: #333333;
+    margin: 0;
+    position: fixed;
+}
+
+#logo-img {
+    background: url("../imagens/logo_banda_extra_small.png") no-repeat;
+    width: 50px;
+    height: 57px;
+    border-radius: 5px;
+    float: left;
+    margin-top: 11px;
 }
 
 #nav-menu {
     float: right;
-    background: #333333;
-    list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 0;
-}
-
-.button {
-    display: inline;
-    background: #333333
-}
-
-.button a {
-    background: #333333;
-    color: #DCDCDC;
-    font-size: 1.7em;
-    margin: 0 5px 0 5px;
-}
-
-.button a:hover {
-    animation: shiny-animation 0.3s linear;
+    margin-bottom: 0;
+    margin-top: 40px;
+    font-size: 1.4em;
 }
 
 /* MAIN CONTENT SECTION */
 
-.container#main-content {
-    background: #DCDCDC;
+#main-content {
+    background: whitesmoke;
     color: #333333;
-    margin-top: 160px;
+    padding-top: 100px;
 }
+
 
 /* FOOTER SECTION */
 
-.container#footer {
+#footer {
+    width: 100%;
+    height: 150px;
     background: #333333;
-    color: #DCDCDC;
-    height: 155px;
+    margin: 0;
     text-align: center;
 }
 
+.footer-info-block {
+    float: left;
+    font-size: 1.4em;
+    padding: 0px 50px;
+    width: 22%;
+}
+
+.footer-info {
+    font-size: 0.8em;
+    padding-top: 10px;
+}
+
+
 /************* Large Devices Only *************/
 @media (min-width: 1200px) {
+
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 1150px;
+    }
+
+    .hidden-l {
+        display: none;
+    }
 
 }
 
 /************* Medium Devices Only *************/
 @media (min-width: 992px) and (max-width: 1199px) {
 
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 942px;
+    }
+
+    .hidden-m {
+        display: none;
+    }
 }
 
 
 /************* Small Devices Only *************/
 @media (min-width: 768px) and (max-width: 991px){
 
-    * {
-        font-size: 0.9em;
-    }
-
     /* NAV BAR SECTION */
 
-    .container#navbar {
-        height: 121px;
+    .container {
+        width: 718px;
     }
 
-    #logo-img {
-        background: url("../imagens/logo_banda_small.png") no-repeat;
-        border-radius: 10px;
-        border: #DCDCDC solid 2px;
-        background-size: cover;
-        width: 89px;
-        height: 101px;
-        float: left;
-        margin-right: 5px;
+    .hidden-sm {
+        display: none;
     }
 
-    h1 {
-        margin-top: 30px;
-    }
-
-    #nav-menu {
-        margin: 20px 0 0 0;
-    }
 }
 
 /************* Extra Small Devices Only *************/
 @media (min-width: 480px) and (max-width: 767px) {
 
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 430px;
+    }
+
+    .hidden-xsm{
+        display: none;
+    }
+
+    h1 span {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #nav-bar {
+        height: 126px;
+    }
+
+    #logo-img {
+        background: url("../imagens/logo_banda_small.png");
+        width: 89px;
+        height: 101px;
+    }
+
+    #collapse-menu {
+        margin-top: 40px;
+    }
+
+    #main-content {
+        padding-top: 131px;
+    }
 }
-/*p{*/
-/*    font-family: sans-serif;*/
-/*    font-size: 50px;*/
-/*    font-weight: 100;*/
-/*    color: #262626;*/
-/*    position: absolute;*/
-/*    text-transform: capitalize;*/
-/*    text-decoration: none;*/
-/*    transition: 0.5s;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    display: flex;*/
-/*    margin: 20px 0;*/
-/*    z-index: 1;*/
-/*}*/
-
-/*p::before{*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border-top: 2px solid #262626;*/
-/*    border-bottom: 2px solid #262626;*/
-/*    transform: scaleY(2);*/
-/*    opacity: 0;*/
-/*    transition: 0.3s;*/
-/*}*/
-
-/*p::after{*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    top: 2px;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border-top: 2px solid #262626;*/
-/*    border-bottom: 2px solid #262626;*/
-/*    transform: scale(0);*/
-/*    opacity: 0;*/
-/*    transition: 0.3s;*/
-/*    background-color: #262626;*/
-/*    z-index: -1;*/
-/*}*/
-
-/*p:hover{*/
-/*    color: #fff;*/
-/*}*/
-
-/*p:hover::before{*/
-/*    transform: scaleY(1);*/
-/*    opacity: 1;*/
-/*}*/
-
-/*p:hover::after{*/
-/*    transform: scaleY(1);*/
-/*    opacity: 1;*/
-/*}*/
