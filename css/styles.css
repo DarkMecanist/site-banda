@@ -84,6 +84,23 @@ button {
     font-size: 1.4em;
 }
 
+/* COLLAPSABLE MENU */
+
+#collapsable-menu {
+    position: absolute;
+    margin-top: 80px;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #333333;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#collapsable-menu li {
+    display: block;
+}
+
 /* MAIN CONTENT SECTION */
 
 #main-content {
@@ -155,6 +172,12 @@ button {
         display: none;
     }
 
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
+        display: none;
+    }
+
 }
 
 /************* Medium Devices Only *************/
@@ -167,6 +190,12 @@ button {
     }
 
     .hidden-m {
+        display: none;
+    }
+
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
         display: none;
     }
 
@@ -251,7 +280,7 @@ button {
         margin-right: auto;
     }
 
-    #collapse-menu {
+    #collapse-menu_button {
         margin-top: 40px;
     }
 
@@ -320,7 +349,7 @@ button {
         margin-right: auto;
     }
 
-    #collapse-menu {
+    #collapse-menu_button {
         margin-top: 40px;
     }
 

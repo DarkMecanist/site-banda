@@ -24,21 +24,24 @@
                 </h1>
             </a>
 
-            <button id="collapse-menu" class="hidden-l hidden-m" onclick="set_main_content();">
+            <button id="collapse-menu_button" class="hidden-l hidden-m" onclick="detect_expand_collapse();">
                 <hr class="icon-bar">
                 <hr class="icon-bar">
                 <hr class="icon-bar">
             </button>
 
             <ul id="nav-menu" class="hidden-sm hidden-xsm">
-                <li><a href="#Banda">Banda</a></li>
-                <li><a href="#História">História</a></li>
-                <li><a href="#Eventos">Eventos</a></li>
-                <li><a href="#Galeria">Galeria</a></li>
-                <li><a href="#footer">Contactos</a></li>
+                <li><a class="nav-menu-button" href="#Banda">Banda</a></li>
+                <li><a class="nav-menu-button" href="#História">História</a></li>
+                <li><a class="nav-menu-button" href="#Eventos">Eventos</a></li>
+                <li><a class="nav-menu-button" href="#Galeria">Galeria</a></li>
+                <li><a class="nav-menu-button" href="#footer">Contactos</a></li>
             </ul>
         </div>
     </nav>
+
+    <!--  COLLAPSABLE MENU  -->
+    <div id="collapsable-menu"></div>
 
     <!--  MAIN CONTENT  -->
     <div id="main-content" class="container">
