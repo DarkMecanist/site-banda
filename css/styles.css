@@ -357,6 +357,12 @@ button {
         padding-top: 131px;
     }
 
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
+       margin-top: 126px;
+    }
+
     /*  FOOTER SECTION  */
 
     #footer {
