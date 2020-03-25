@@ -7,21 +7,37 @@ function set_main_content() {
     console.log(document.getElementById("main-content").textContent)
 }
 
+var is_pressed = true;
+
 function detect_expand_collapse() {
-    if (document.getElementById('collapse-menu_button').style[0] == 'background-color') {
+    var button = document.getElementById('collapse-menu_button');
+
+    if (is_pressed === false) {
         collapse_collapsable_menu();
-        console.log('collapsing menu')
+
+        console.log('collapsing menu');
+
+        button.style = 'background-color: #333333';
+
+        is_pressed = true;
+
     } else{
         expand_collapsable_menu();
-        // console.log(document.getElementById('collapse-menu_button').style[0] == 'background-color');
-        console.log('expanding menu')
+
+        console.log('expanding menu');
+
+        button.style = 'background-color: #b30000';
+
+        is_pressed = false;
     }
 
 }
 
 
 function expand_collapsable_menu() {
-    document.getElementById('collapsable-menu').innerHTML = '<ul>\n' +
+    var collapsable_menu = document.getElementById('collapsable-menu');
+
+    collapsable_menu.innerHTML = '<ul>\n' +
         '            <li><a class="nav-menu-button" href="#Banda">Banda</a></li>\n' +
         '            <li><a class="nav-menu-button" href="#História">História</a></li>\n' +
         '            <li><a class="nav-menu-button" href="#Eventos">Eventos</a></li>\n' +
@@ -29,11 +45,14 @@ function expand_collapsable_menu() {
         '            <li><a class="nav-menu-button" href="#footer">Contactos</a></li>\n' +
         '        </ul>';
 
-    document.getElementById('collapse-menu_button').style = 'background-color: #b30000'
+    console.log(collapsable_menu.style);
 }
 
 function collapse_collapsable_menu() {
-    document.getElementById('collapsable-menu').innerHTML = '';
+    var collapsable_menu = document.getElementById('collapsable-menu');
 
-    document.getElementById('collapse-menu_button').style = 'background-color: #333333'
+    collapsable_menu.innerHTML = '';
+
 }
+
+document.getElementById('collapse-menu_button').onclick = detect_expand_collapse;

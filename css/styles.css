@@ -87,18 +87,26 @@ button {
 /* COLLAPSABLE MENU */
 
 #collapsable-menu {
-    position: absolute;
-    margin-top: 80px;
-    margin-bottom: 0;
-    padding: 0;
-    width: 100%;
+    clear: both;
     background-color: #333333;
     color: whitesmoke;
     text-align: center;
+    font-size: 1.2em;
+
 }
 
 #collapsable-menu li {
     display: block;
+    border-top: 1px solid whitesmoke;
+    margin: 2px;
+}
+
+#collapsable-menu li:nth-child(5) {
+    border-bottom: 1px solid whitesmoke;
+}
+
+#collapsable-menu ul {
+    padding: 0 10px 10px 10px;
 }
 
 /* MAIN CONTENT SECTION */
