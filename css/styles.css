@@ -21,6 +21,7 @@ button:focus {
 a {
     text-decoration: none;
     color: whitesmoke;
+    background-color: #333333;
 }
 
 ul {
@@ -29,11 +30,15 @@ ul {
 
 li {
     display: inline;
-    padding-right: 10px;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    background-color: #333333;
+    border-radius: 2px;
 }
 
-li:nth-child(5) {
-    padding-right: 0;
+li:nth-child(1), li:nth-child(1) a {
+    background-color: whitesmoke;
+    color: #333333;
 }
 
 h1 {
@@ -43,15 +48,6 @@ h1 {
     float: left;
     margin-left: 10px;
     margin-top: 22px;
-}
-
-button {
-    float: right;
-    margin: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: #333333;
 }
 
 #icon-bar {
@@ -107,6 +103,14 @@ button {
 
 #collapsable-menu ul {
     padding: 0 10px 10px 10px;
+}
+
+#collapse-menu_button {
+    width: 45px;
+    height: 45px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 /* MAIN CONTENT SECTION */
