@@ -36,10 +36,10 @@ li {
     border-radius: 2px;
 }
 
-li:nth-child(1), li:nth-child(1) a {
-    background-color: whitesmoke;
-    color: #333333;
-}
+/*li:nth-child(1), li:nth-child(1) a {*/
+/*    background-color: whitesmoke;*/
+/*    color: #333333;*/
+/*}*/
 
 h1 {
     font-size: 1.6em;
@@ -111,6 +111,7 @@ h1 {
     float: right;
     border-radius: 10px;
     margin-top: 15px;
+    background-color: #333333;
 }
 
 /* MAIN CONTENT SECTION */
