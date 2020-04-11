@@ -1,8 +1,14 @@
 body {
-    font-family: 'Fondamento', cursive;
+    /*font-family: 'Fondamento', cursive;*/
+    font-family: 'Playfair Display', serif;
     background-color: whitesmoke;
     padding: 0;
     margin: 0;
+}
+
+::selection {
+    color: whitesmoke;;
+    background-color: #333333;
 }
 
 .container {
@@ -28,12 +34,13 @@ ul {
     list-style: none;
 }
 
-li {
+#nav-menu > li {
     display: inline;
     padding: 2px 5px 2px 5px;
     text-align: center;
     background-color: #333333;
     border-radius: 2px;
+    font-size: 0.95em;
 }
 
 /*li:nth-child(1), li:nth-child(1) a {*/
@@ -120,10 +127,61 @@ h1 {
     background: whitesmoke;
     color: #333333;
     padding-top: 100px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
+h2 {
+    display: inline;
+    font-size: 1em;
+}
 
-/* FOOTER SECTION */
+#subpage-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#registrations-topics {
+    margin: 20px auto;
+}
+
+#registrations-topics li {
+    font-size: 1.1em;
+    display: inline;
+    margin: 0 10px;
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+#preview-instruments {
+
+}
+
+#list-instruments{
+    background-color: #333333;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+#list-instruments li {
+    color: whitesmoke;
+    margin: 5px 0;
+    padding: 0 10px;
+    cursor: default;
+}
+
+#image-instrument {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 100px;
+}
 
 #footer {
     width: 100%;
@@ -131,7 +189,6 @@ h1 {
     background: #333333;
     margin: 0;
     text-align: center;
-    font-family: 'Calibri', serif ;
 }
 
 .footer-info-block {
@@ -147,7 +204,8 @@ h1 {
 }
 
 .footer-info {
-    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    font-size: 0.7em;
     padding-top: 2px;
     padding-bottom: 5px;
     text-align: center;
