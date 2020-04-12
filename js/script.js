@@ -181,32 +181,32 @@
             var image_element = document.getElementById('image-instrument');
 
             if (selected_instrument === "Flauta transversal") {
+                image_element.style.cssText = 'height: auto; width:100%;';
                 image_element.src = "imagens/inscrições/flauta transversal_grande.png";
-                image_element.style.cssText = 'height: auto; width:100%;'
             } else if (selected_instrument === "Clarinete") {
+                image_element.style.cssText = 'height: auto; width:100%;';
                 image_element.src = "imagens/inscrições/clarinete_grande.png";
-                image_element.style.cssText = 'height: auto; width:100%;'
             } else if (selected_instrument === "Saxofone") {
+                image_element.style.cssText = 'height: 420px; width:auto;';
                 image_element.src = "imagens/inscrições/saxofone_grande.png";
-                image_element.style.cssText = 'height: 420px; width:auto;'
             } else if (selected_instrument === "Trompete") {
+                image_element.style.cssText = 'height: auto; width:100%;';
                 image_element.src = "imagens/inscrições/trompete_grande.png";
-                image_element.style.cssText = 'height: auto; width:100%;'
             } else if (selected_instrument === "Trompa") {
+                image_element.style.cssText = 'height: 420px; width:auto;';
                 image_element.src = "imagens/inscrições/trompa_grande.png";
-                image_element.style.cssText = 'height: 420px; width:auto;'
             } else if (selected_instrument === "Trombone") {
+                image_element.style.cssText = 'height: auto; width:100%;';
                 image_element.src = "imagens/inscrições/trombone_grande.png";
-                image_element.style.cssText = 'height: auto; width:100%;'
             } else if (selected_instrument === "Tuba") {
+                image_element.style.cssText = 'height: 420px; width:auto;';
                 image_element.src = "imagens/inscrições/tuba_grande.png";
-                image_element.style.cssText = 'height: 420px; width:auto;'
             } else if (selected_instrument === "Bombardino") {
+                image_element.style.cssText = 'height: 420px; width:auto;';
                 image_element.src = "imagens/inscrições/bombardino_grande.png";
-                image_element.style.cssText = 'height: 420px; width:auto;'
             } else if (selected_instrument === "Percussão") {
+                image_element.style.cssText = 'height: auto; width: 80%;';
                 image_element.src = "imagens/inscrições/percussão_grande.png";
-                image_element.style.cssText = 'height: auto; width: 80%;'
             }
         }
 
