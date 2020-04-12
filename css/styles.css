@@ -176,13 +176,21 @@ h2 {
 }
 
 #image-instrument {
-    width: 45%;
+    width: 100%;
     height: auto;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 100px;
+
+    padding: 10px;
+
 }
 
+#image-placeholder {
+    vertical-align: middle;
+    width: 55%;
+    height: auto;
+    display: inline-block;
+}
+
+/* FOOTER SECTION */
 #footer {
     width: 100%;
     height: 160px;
