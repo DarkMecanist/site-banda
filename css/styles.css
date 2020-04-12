@@ -163,6 +163,27 @@ hr.event-separator {
     border-radius: 5px;
 }
 
+/* HISTÓRIA*/
+#history-main-content  {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.name-list {
+    list-style: square;
+    text-indent: 0;
+}
+
+.history-image {
+    width: 80%;
+    margin-top: 20px;
+}
+
+section {
+    text-indent: 50px;
+}
+
+
 
 /* PAGINA INSCRIÇÕES */
 #registrations-topics {
@@ -177,10 +198,6 @@ hr.event-separator {
     color: whitesmoke;
     padding: 7px;
     border-radius: 4px;
-}
-
-#preview-instruments {
-
 }
 
 #list-instruments{
