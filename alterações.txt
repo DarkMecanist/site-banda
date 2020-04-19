@@ -1,0 +1,5 @@
+- aumentar barras pretas cabeçalho e rodapé;
+- remover negritos;
+x diminuir cartazes eventos e maximizar ao clicar;
+- dividir foto história em 3 fotos separadas e corrigir o texto;
+x incluir endereço da banda no mail das inscrições; 

@@ -25,6 +25,7 @@
         var button = document.getElementById('collapse-menu_button');
         var selected_menu = 'Eventos';
         var selected_instrument = 'Flauta transversal';
+        var currently_open_modal = '';
 
         function set_main_content(page) {
             showLoading('#main-content');
@@ -50,7 +51,7 @@
                 var selected_style = 'background-color: whitesmoke; color: #333333; border-radius: 2px;';
                 var instrument_list = document.querySelector("#list-instruments").children;
 
-                for (i=0; i < instrument_list.length; i++) {
+                for (let i=0; i < instrument_list.length; i++) {
 
                     if (instrument_list[i].tagName === "LI") {
                         instrument_list[i].addEventListener('mouseover', apply_mouseover_style_instrument);
@@ -70,6 +71,31 @@
                 }
 
                 change_image_instrument();
+            } else if (page === 'Galeria') {
+
+                var image_list = document.querySelectorAll('.gallery-image');
+                for (let i = 0; i < image_list.length; i++) {
+                    image_list[i].onclick = open_modal;
+                }
+
+                let close_modal_buttons = document.querySelectorAll('.close-modal');
+                for (let i = 0; i < close_modal_buttons.length; i++) {
+                    close_modal_buttons[i].onclick = close_modal;
+                }
+
+                var expand_album_buttons = document.querySelectorAll('.button-expand');
+                for (let i = 0; i < expand_album_buttons.length; i++) {
+                    expand_album_buttons[i].onclick = expand_album_view;
+                }
+            } else if (page === 'Eventos') {
+                var event_images = document.querySelectorAll('.event-image');
+                for (i = 0; i < event_images.length; i++) {
+                    event_images[i].onclick = open_modal;
+                }
+                let close_modal_buttons = document.querySelectorAll('.close-modal');
+                for (i = 0; i < close_modal_buttons.length; i++) {
+                    close_modal_buttons[i].onclick = close_modal;
+                }
             }
 
         }
@@ -288,13 +314,95 @@
         }
 
         function refresh_event_listeners(){
-            for (i=0; i<document.querySelectorAll('.nav-menu-button').length; i++) {
+            console.log('running refresh event listener');
+
+            for (var i=0; i<document.querySelectorAll('.nav-menu-button').length; i++) {
                 document.querySelectorAll('.nav-menu-button')[i].onclick = select_menu;
                 document.querySelectorAll('.nav-menu-button')[i].addEventListener('mouseover', apply_mouseover_style_nav_menu);
                 document.querySelectorAll('.nav-menu-button')[i].addEventListener('mouseleave', remove_mouseover_style_nav_menu);
             }
 
+            var event_images = document.querySelectorAll('.event-image');
+            for (i = 0; i < event_images.length; i++) {
+                event_images[i].onclick = open_modal;
+            }
+            var close_modal_buttons = document.querySelectorAll('.close-modal');
+            for (i = 0; i < close_modal_buttons.length; i++) {
+                close_modal_buttons[i].onclick = close_modal;
+            }
+
+
+            }
+
+        function open_modal(){
+            var target_modal = this.nextElementSibling;
+            currently_open_modal = target_modal;
+
+            document.addEventListener('keydown', close_modal_by_esc_press);
+            target_modal.addEventListener('click', close_modal_by_outside_click);
+
+            target_modal.style.display = "block";
         }
+
+        function close_modal(){
+
+            document.removeEventListener('keydown', close_modal_by_esc_press);
+            currently_open_modal.removeEventListener('click', close_modal_by_outside_click);
+
+            currently_open_modal.style.display = 'none';
+            currently_open_modal = '';
+        }
+
+        function close_modal_by_esc_press(event) {
+            const keyName = event.key;
+            console.log(keyName);
+            if (keyName === 'Escape') {
+                close_modal()
+            }
+        }
+
+        function close_modal_by_outside_click(event) {
+            if (event.target.tagName !== 'IMG'){
+                close_modal();
+            }
+        }
+
+        function expand_album_view() {
+
+            console.log(this);
+            console.log('expanding album');
+
+            var album = this.previousElementSibling;
+            var hidden_photos = document.querySelectorAll('.hidden-photo');
+
+            for (let i = 0; i < hidden_photos.length; i++) {
+                if (hidden_photos[i].parentElement === this.previousElementSibling) {
+                    hidden_photos[i].style.cssText = 'display: inline;';
+                }
+            }
+
+            this.innerText = 'Ver -';
+            this.onclick = collapse_album_view;
+
+        }
+
+        function collapse_album_view() {
+
+            console.log(this);
+            console.log('collapsing album');
+
+            var hidden_photos = document.querySelectorAll('.hidden-photo');
+
+            for (let i = 0; i < hidden_photos.length; i++) {
+                if (hidden_photos[i].parentElement === this.previousElementSibling) {
+                    hidden_photos[i].style.cssText = 'display: none;';
+                }
+            }
+
+            this.innerText = 'Ver +';
+            this.onclick = expand_album_view;
+        }
+
 
         document.getElementById('collapse-menu_button').onclick = detect_expand_collapse;
         document.getElementById('footer').addEventListener('click', force_collapse);
@@ -302,16 +410,15 @@
         // document.querySelector('.nav-menu-button').addEventListener('mouseover', add_li_border_radius);
         // document.querySelector('.nav-menu-button').addEventListener('mouseleave', remove_li_border_radius);
 
-        refresh_event_listeners();
-        highlight_selected_nav_menu_button();
-
         showLoading('#main-content');
 
         $ajaxUtils.sendGetRequest(eventosHtml, function (responseText) {
             document.querySelector("#main-content").innerHTML = responseText;
-        }, false);
-    });
+        }, false, false);
 
+        refresh_event_listeners();
+        highlight_selected_nav_menu_button();
+    });
 
 })(window);
 
