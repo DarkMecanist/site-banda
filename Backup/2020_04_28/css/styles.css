@@ -1,0 +1,645 @@
+body {
+    /*font-family: 'Fondamento', cursive;*/
+    font-family: 'Playfair Display', serif;
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: whitesmoke;;
+    background-color: #333333;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #333333;
+    color: whitesmoke;
+}
+
+button:focus {
+    outline: 0;
+}
+
+/* NAV BAR SECTION */
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #333333;
+}
+
+ul {
+    list-style: none;
+}
+
+#nav-menu > li {
+    display: inline;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    background-color: #333333;
+    border-radius: 2px;
+    font-size: 0.95em;
+}
+
+/*li:nth-child(1), li:nth-child(1) a {*/
+/*    background-color: whitesmoke;*/
+/*    color: #333333;*/
+/*}*/
+
+h1 {
+    font-size: 1.6em;
+    color: whitesmoke;
+    text-transform: capitalize;
+    float: left;
+    margin-left: 10px;
+    margin-top: 32px;
+    font-weight: normal;
+}
+
+#icon-bar {
+    color: whitesmoke;
+    display: block;
+}
+
+#nav-bar {
+    width: 100%;
+    height: 100px;
+    background: #333333;
+    margin: 0;
+    position: fixed;
+}
+
+#logo-img {
+    background: url("../imagens/logo_banda_extra_small.png") no-repeat;
+    width: 50px;
+    height: 57px;
+    border-radius: 5px;
+    float: left;
+    margin-top: 21px;
+}
+
+#nav-menu {
+    float: right;
+    margin-bottom: 0;
+    margin-top: 60px;
+    font-size: 1.4em;
+}
+
+/* COLLAPSABLE MENU */
+
+#collapsable-menu {
+    clear: both;
+    background-color: #333333;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+#collapsable-menu li {
+    display: block;
+    border-top: 1px solid whitesmoke;
+    margin: 2px;
+}
+
+#collapsable-menu li:nth-child(5) {
+    border-bottom: 1px solid whitesmoke;
+}
+
+#collapsable-menu ul {
+    padding: 0 10px 10px 10px;
+}
+
+#collapse-menu_button {
+    width: 45px;
+    height: 45px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: #333333;
+}
+
+/* MAIN CONTENT SECTION */
+
+#main-content {
+    background: whitesmoke;
+    color: #333333;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+h2 {
+    display: inline;
+    font-size: 1em;
+    padding-top: 20px;
+}
+
+#subpage-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* PÁGINA EVENTOS */
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+hr.event-separator {
+    margin-top: 40px;
+    background-color: #333333;
+}
+
+.event-image {
+    width: 60%;
+    height: auto;
+    /*height: 550px;*/
+    /*width: auto;*/
+    border-radius: 5px;
+}
+
+.event-image:hover, .event-image:focus {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    width: 80%;
+    padding: 20px;
+    margin: 5% auto;
+}
+
+.close-modal {
+    color: #333333;
+    float: right;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.close-modal:hover, .close-modal:focus {
+    color: whitesmoke;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal-event-image {
+    width: 100%;
+}
+
+/* PÁGINA HISTÓRIA*/
+#history-main-content  {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.name-list {
+    list-style: square;
+    text-indent: 0;
+}
+
+.history-image-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.image-block {
+    display: inline-block;
+    margin: 0 10px 20px;
+}
+
+.image-block img {
+    border-radius: 5px;
+    border: 2px solid #333333;
+}
+
+section {
+    text-indent: 50px;
+}
+
+/* PAGINA GALERIA*/
+
+.photo-content {
+    box-sizing: border-box;
+    background-color: #333333;
+    border-radius: 2px;
+    border: 2px solid gray;
+    padding: 20px;
+    width: 100%;
+    height: 35%;
+}
+
+.miniature-photo {
+    display: inline;
+    width: 18%;
+}
+
+.hidden-photo {
+    display: none;
+}
+
+.gallery-image {
+    box-sizing: border-box;
+    width: 205px;
+    height: auto;
+    margin: 5px;
+    border-radius: 4px;
+    border: 2px solid whitesmoke;
+}
+
+.gallery-image:hover {
+    cursor: pointer;
+}
+
+.button-expand {
+    margin: 10px;
+    width: 75px;
+    height: 45px;
+    font-size: 1.1em;
+    color: whitesmoke;
+    background-color: #333333;
+    border-radius: 30%;
+}
+
+.button-expand:hover {
+    cursor: pointer;
+    background-color: grey;
+    transition: 0.5s;
+}
+
+/* PAGINA INSCRIÇÕES */
+#registrations-topics {
+    margin: 20px auto;
+}
+
+#registrations-topics li {
+    font-size: 1.1em;
+    display: inline;
+    margin: 0 10px;
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+#list-instruments{
+    background-color: #333333;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+#list-instruments li {
+    color: whitesmoke;
+    margin: 5px 0;
+    padding: 0 10px;
+    cursor: default;
+}
+
+#image-instrument {
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+}
+
+#image-placeholder {
+    vertical-align: middle;
+    width: 55%;
+    height: auto;
+    display: inline-block;
+}
+
+.email {
+    background-color: whitesmoke;
+    color: #333333;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.email:hover {
+    /*background-color: #333333;*/
+    /*color: whitesmoke;*/
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* FOOTER SECTION */
+#footer {
+    width: 100%;
+    height: 200px;
+    background: #333333;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-info-block {
+    float: left;
+    margin-top: 20px;
+    font-size: 1.6em;
+    padding: 5px 25px;
+    width: 28%;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-info {
+    font-family: 'Lora', serif;
+    font-size: 0.7em;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#facebook-logo {
+    font-size: 1.8em;
+    padding-top: 8px;
+}
+
+#facebook-logo:hover {
+    color: #3b5998;
+    transition: 0.2s;
+}
+
+#logo-camara {
+    background: url("../imagens/logo-camara_small.png") no-repeat center;
+    width: 280px;
+    height: 95px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/************* Large Devices Only *************/
+@media (min-width: 1200px) {
+
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 1150px;
+    }
+
+    .hidden-l {
+        display: none;
+    }
+
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
+        display: none;
+    }
+
+}
+
+/************* Medium Devices Only *************/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 942px;
+    }
+
+    .hidden-m {
+        display: none;
+    }
+
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
+        display: none;
+    }
+
+    /*  FOOTER SECTION  */
+
+    .footer-info {
+        font-size: 0.7em;
+    }
+}
+
+
+/************* Small Devices Only *************/
+@media (min-width: 768px) and (max-width: 991px){
+
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 718px;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+
+    /*  FOOTER SECTION  */
+
+    #footer {
+        height: 120px;
+    }
+
+    .footer-info-block {
+        font-size: 1.2em;
+        width: 25%;
+        margin-top: 5px;
+    }
+
+    .footer-info {
+        font-size: 0.6em;
+    }
+
+    #map-tile iframe {
+        width: 150px;
+        height: 70px;
+    }
+
+    #logo-camara {
+        background: url("../imagens/logo-camara_extra_small.png");
+        width: 180px;
+        height: 61px;
+    }
+}
+
+/************* Extra Small Devices Only *************/
+@media (min-width: 480px) and (max-width: 767px) {
+
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 430px;
+    }
+
+    .hidden-xsm{
+        display: none;
+    }
+
+    h1 span {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    #nav-bar {
+        height: 126px;
+    }
+
+    #logo-img {
+        background: url("../imagens/logo_banda_small.png");
+        width: 89px;
+        height: 101px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    #collapse-menu_button {
+        margin-top: 40px;
+    }
+
+    #main-content {
+        padding-top: 131px;
+    }
+
+    /*  FOOTER SECTION  */
+
+    #footer {
+        height: 450px;
+    }
+
+    .footer-info-block {
+        font-size: 1.6em;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .footer-info {
+        font-size: 0.6em;
+    }
+
+    #map-tile iframe {
+        width: 250px;
+        height: 100px;
+    }
+
+    #logo-camara {
+        background: url("../imagens/logo-camara_small.png") no-repeat center;
+        width: 280px;
+        height: 95px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/************* Ultra Small Devices Only *************/
+@media (max-width: 479px) {
+    /* NAV BAR SECTION */
+
+    .container {
+        width: 95%;
+    }
+
+    .hidden-xsm{
+        display: none;
+    }
+
+    h1 span {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #nav-bar {
+        height: 126px;
+    }
+
+    #logo-img {
+        background: url("../imagens/logo_banda_small.png");
+        width: 89px;
+        height: 101px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #collapse-menu_button {
+        margin-top: 40px;
+    }
+
+    #main-content {
+        padding-top: 131px;
+    }
+
+    /* COLLAPSABLE MENU */
+
+    #collapsable-menu {
+       margin-top: 126px;
+    }
+
+    /*  FOOTER SECTION  */
+
+    #footer {
+        height: 450px;
+    }
+
+    .footer-info-block {
+        font-size: 1.4em;
+        width: 85%;
+    }
+
+    .footer-info {
+        font-size: 0.6em;
+        display: block;
+    }
+
+    a.footer-info {
+        display: inline-block;
+    }
+
+    #map-tile iframe {
+        margin-top: 10px;
+        width: 250px;
+        height: 100px;
+    }
+
+    #logo-camara {
+        background: url("../imagens/logo-camara_small.png") no-repeat center;
+        width: 250px;
+        height: 95px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10px;
+    }
+
+    .footer-title a {
+        width: 260px;
+    }
+
+}
+

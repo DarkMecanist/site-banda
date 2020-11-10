@@ -1,0 +1,11 @@
+-Source Sans Pro;
+-Roboto Condensed;
+-Raleway;
+-Noto Sans;
+-PT Sans;
+-Playfair Display;
+-Muli;
+-PT Serif;
+-Lora;
+-Slabo 27px;
+-Noto Serif.

@@ -3,7 +3,7 @@
 
     var eventosHtml = "snippets/eventos-snippet.html";
     var historiaHtml = "snippets/história-snippet.html";
-    var galeriaHtml = "snippets/galeria-snippet.html";
+    var galeriaHtml = "snippets/galeria-snippet.php";
     var inscricoesHtml = "snippets/inscrições-snippet.html";
 
     // Function to insert HTML into a selector
@@ -86,6 +86,20 @@
                 var expand_album_buttons = document.querySelectorAll('.button-expand');
                 for (let i = 0; i < expand_album_buttons.length; i++) {
                     expand_album_buttons[i].onclick = expand_album_view;
+                }
+
+                var photo_contents = document.querySelectorAll('.photo-content');
+                for (let i = 0; i < photo_contents.length; i++) {
+                  let image_counter = 0;
+                  let images = photo_contents[i].children;
+
+                  for (let j = 0; j < images.length; j++) {
+
+                    image_counter += 1;
+                    if (image_counter > 10) {
+                      images[j].classList.add("hidden-photo");
+                    }
+                  }
                 }
             } else if (page === 'Eventos') {
                 var event_images = document.querySelectorAll('.event-image');
@@ -421,4 +435,3 @@
     });
 
 })(window);
-
